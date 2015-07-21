@@ -133,8 +133,9 @@ def regular_measuring():
             
         h = 100.0
         
-    return(h)
     write_file('Humidity:  ' + h)
+    return(h)
+    
     
     
 

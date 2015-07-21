@@ -133,7 +133,7 @@ def regular_measuring():
             
         h = 100.0
         
-    write_file('Humidity:  ' + h)
+    write_file('Humidity:  ' +  str(h))
     return(h)
     
     
@@ -186,7 +186,7 @@ def wait_for_joystick(still_there):
     # written by Aaron
     global pressed
     pressed = 0
-    print("waiting for joystick")
+    #print("waiting for joystick")
     pygame.init()
     pygame.display.set_mode((640, 480))
    
@@ -224,6 +224,7 @@ def waiter(there_or_still_there):
     #written by Richard
     global pressed
     pressed = 0
+    print('waiting for input')
     wait_for_joystick(there_or_still_there)
     if pressed == 1:
         #ap.show_message("Yess!")

@@ -28,7 +28,7 @@ while True:
     swf.display_start()
     no_astro=True#False
     while no_astro:
-        # keep doing this until we find an astronaut, then restart thisn loop 
+        # keep doing this until we find an astronaut, then restart this loop 
         swf.display_measuring()
         measured=swf.regular_measuring()
         
@@ -56,6 +56,7 @@ while True:
                     if not swf.sweaty_check(humid,mean_values,range_values):
                         return_to_normal=True # humidity is back to normal to restart looking for astronauts
                     else:
+                        swf.write_file('Humidity still high')
                         swf.display_still_there() # humidity still high so ask if the astronuat is still there
                         if swf.waiter(True):
                             swf.write_file('astrothing still incoming :-)')

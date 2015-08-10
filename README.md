@@ -29,8 +29,6 @@ picamera
 RPi.GPIO
 
 
-XXX include flowchart ***
-
 ### Usage
 
 Make sure you have your AstroPi HAT and a Pi camera installed.
@@ -38,6 +36,8 @@ Make sure you have your AstroPi HAT and a Pi camera installed.
 Then run:
 
 sudo python sweaty_astronaut.py
+
+The program will first create a baseline value for the humidity, then monitor the environment for changes in humidity. If a change above a certain threshold (see Optimisation below) is detected, it will ask for confirmation of astronaut presence. The astronaut can do this by either pressing the joystick or one of the flight case buttons. The AstroPi will then take a picture and either resume monitoring (if humidity returns to normal) or re-calculate the baseline if this takes too long. All data is logged to a file. 
  
 ###List of functions
 
@@ -45,7 +45,7 @@ Any function that starts with the *display_* will be used to write a (hopefully)
 
 ####button_pressed(button)
 
-Checks to see if one of the GPIO []flight case] (https://www.raspberrypi.org/blog/astro-pi-flight-case/) buttons has been pressed. This code is lifted from []here] (https://www.raspberrypi.org/learning/astro-pi-guide/inputs-outputs/buttons.md). Sets the variable *pressed* to 1 if a button press is detected.
+Checks to see if one of the GPIO [flight case] (https://www.raspberrypi.org/blog/astro-pi-flight-case/) buttons has been pressed. This code is lifted from [here] (https://www.raspberrypi.org/learning/astro-pi-guide/inputs-outputs/buttons.md). Sets the variable *pressed* to 1 if a button press is detected.
 
 ####write_file(data)
 

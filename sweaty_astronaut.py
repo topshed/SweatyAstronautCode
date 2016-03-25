@@ -1,6 +1,6 @@
 # Main sweaty Astronaut code written by Jasper, comments by Richard
 import sweaty_astronaut_framed as saf
-from astro_pi import AstroPi
+from sense_hat import SenseHat
 import sweaty_astronaut_functions as swf # where all our functions are defined
 import math
 import time

@@ -1,6 +1,6 @@
 # Functions for AstroPi Sweaty Astronaut written by Cranmere CodeClub
 import time, math, random, logging
-from astro_pi import AstroPi
+from sense_hat import SenseHat
 import pygame
 import picamera
 from pygame.locals import *
@@ -15,7 +15,7 @@ A=16
 B=21
 GPIO.setmode(GPIO.BCM)
 
-ap = AstroPi()
+ap = SenseHat()
 ap.set_rotation(270)
 
 def button_pressed(button):
